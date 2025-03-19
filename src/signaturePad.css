@@ -116,4 +116,13 @@
     padding: 0.5rem;
     font-size: 0.75rem;
   }
-} 
+}
+
+/* Cursor styles for the signature pad */
+.sigpad-canvas.pen-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' d='M14.5 4.5L19.5 9.5M3 21L4 14L19 3L21 5L10 20L3 21Z'/%3E%3C/svg%3E") 1 21, crosshair;
+}
+
+.dark .sigpad-canvas.pen-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='2' d='M14.5 4.5L19.5 9.5M3 21L4 14L19 3L21 5L10 20L3 21Z'/%3E%3C/svg%3E") 1 21, crosshair;
+}
