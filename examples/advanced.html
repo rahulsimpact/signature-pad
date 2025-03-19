@@ -218,6 +218,13 @@
             <label for="addBorder">Add Border</label>
           </div>
         </div>
+        
+        <div class="option-group">
+          <div class="checkbox-label">
+            <input type="checkbox" id="penCursor" checked>
+            <label for="penCursor">Show Pen Cursor</label>
+          </div>
+        </div>
       </div>
       
       <button id="applyOptions">Apply Options</button>
@@ -246,7 +253,8 @@
       showCustomText: false,
       customText: '',
       addBorder: false,
-      format: 'png'
+      format: 'png',
+      penCursor: true
     });
     
     // Get form elements
@@ -260,6 +268,7 @@
     const customText = document.getElementById('customText');
     const customTextGroup = document.getElementById('customTextGroup');
     const addBorder = document.getElementById('addBorder');
+    const penCursor = document.getElementById('penCursor');
     const applyOptions = document.getElementById('applyOptions');
     const previewContainer = document.getElementById('previewContainer');
     const previewImage = document.getElementById('previewImage');
@@ -286,7 +295,8 @@
         showDate: showDate.checked,
         showCustomText: showCustomText.checked,
         customText: customText.value,
-        addBorder: addBorder.checked
+        addBorder: addBorder.checked,
+        penCursor: penCursor.checked
       });
       
       // Generate preview if signature exists
