@@ -2,7 +2,7 @@
 
 A lightweight, customizable signature pad built with HTML5 Canvas. Create beautiful signatures with customizable options, downloadable in multiple formats.
 
-![SignaturePad Preview](https://github.com/rahulsimpact/signature-pad/examples/screenshots/preview.png)
+![SignaturePad Preview](https://raw.githubusercontent.com/rahulsimpact/signature-pad/refs/heads/main/examples/preview.png)
 
 ## Features
 
