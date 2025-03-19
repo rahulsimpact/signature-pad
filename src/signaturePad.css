@@ -1,0 +1,119 @@
+/**
+ * SignaturePad CSS
+ * @version 1.0.0
+ */
+
+/* Main container */
+.signature-pad {
+  --sigpad-primary-color: #5D5CDE;
+  --sigpad-bg-color: #FFFFFF;
+  --sigpad-text-color: #333333;
+  --sigpad-border-color: #E5E5E5;
+  --sigpad-button-bg: #F3F4F6;
+  --sigpad-button-hover-bg: #E5E7EB;
+  --sigpad-button-active-bg: #D1D5DB;
+  
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--sigpad-text-color);
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Dark mode */
+.signature-pad.dark {
+  --sigpad-bg-color: #1F2937;
+  --sigpad-text-color: #F3F4F6;
+  --sigpad-border-color: #4B5563;
+  --sigpad-button-bg: #374151;
+  --sigpad-button-hover-bg: #4B5563;
+  --sigpad-button-active-bg: #6B7280;
+}
+
+/* Wrapper */
+.sigpad-wrapper {
+  width: 100%;
+  background-color: var(--sigpad-bg-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Canvas container */
+.sigpad-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #FFFFFF;
+  border: 2px solid var(--sigpad-border-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Canvas element */
+.sigpad-canvas {
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+/* Empty message */
+.sigpad-empty-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  color: #9CA3AF;
+  font-size: 1rem;
+}
+
+/* Controls container */
+.sigpad-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Buttons */
+.sigpad-controls button {
+  flex: 1;
+  min-width: 80px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  background-color: var(--sigpad-button-bg);
+  color: var(--sigpad-text-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: center;
+}
+
+.sigpad-controls button:hover {
+  background-color: var(--sigpad-button-hover-bg);
+}
+
+.sigpad-controls button:active {
+  background-color: var(--sigpad-button-active-bg);
+}
+
+/* Special buttons */
+.sigpad-btn-download {
+  background-color: var(--sigpad-primary-color) !important;
+  color: white !important;
+}
+
+.sigpad-btn-download:hover {
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .sigpad-controls button {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+} 
