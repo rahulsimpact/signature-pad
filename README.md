@@ -7,6 +7,7 @@ A lightweight, customizable signature pad built with HTML5 Canvas. Create beauti
 ## Features
 
 - Smooth signature drawing with adjustable pen properties
+- Custom pen/pencil cursor for intuitive signing experience
 - Multiple export formats: PNG, JPEG, SVG
 - Save and load signatures using localStorage
 - Customizable styling and appearance
