@@ -33,7 +33,8 @@ class SignaturePad {
       addBorder: false,
       format: 'png', // png, jpeg, svg
       className: 'signature-pad',
-      dark: false
+      dark: false,
+      penCursor: true  // Show pen cursor
     }, options);
     
     // State variables
@@ -68,6 +69,9 @@ class SignaturePad {
     // Create drawing canvas
     this.canvas = document.createElement('canvas');
     this.canvas.className = 'sigpad-canvas';
+    if (this.options.penCursor) {
+      this.canvas.classList.add('pen-cursor');
+    }
     this.ctx = this.canvas.getContext('2d');
     
     // Create empty message
@@ -582,6 +586,12 @@ class SignaturePad {
       } else {
         this.container.classList.remove('dark');
       }
+    } else if (name === 'penCursor') {
+      if (value) {
+        this.canvas.classList.add('pen-cursor');
+      } else {
+        this.canvas.classList.remove('pen-cursor');
+      }
     }
     
     return this;
@@ -649,4 +659,4 @@ if (typeof module !== 'undefined' && module.exports) {
   module.exports = SignaturePad;
 } else {
   window.SignaturePad = SignaturePad;
-} 
+}
